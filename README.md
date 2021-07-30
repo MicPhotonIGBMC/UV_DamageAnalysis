@@ -10,7 +10,7 @@ This is a package of 3 macros to analyse data that have been obtained from the N
 The macro prepares the UV irradaition time sequence data acquired with the spinning disk using the metamorph software 
   
 When running, the macro : 
-- ask the user to select a .nd file in a folder
+- asks the user to select a .nd file in a folder
 - open the correponding image sequence
 - read the real time of acqusition and create a text file containing the time values
 - read the .rgn file corresponding to the UV irradiation ROI lines saved during acqusition 
@@ -27,7 +27,7 @@ When running, the macro :
 The macro has to be apply after the Crop_And_LoadROIline macro
 
 when running the macro:
-- ask to the user to select the directory where are the "crop" sequences of images (single nucleus with corresponding ROI line)
+- asks to the user to select the directory where are the "crop" sequences of images (single nucleus with corresponding ROI line)
 - in batch mode, the macro will automatically align all the image files .tif containing "crop" in their name (files genertaed by the Crop_And_LoadROIline macro)
 - when alignment of a sequence is finished, the aligned sequence is saved instead of the "crop" image
 - a text window indicates that the alignment is in progress and how many files are still to process
@@ -41,10 +41,10 @@ when running the macro:
 
 This macro has to be installed (two step macro)
 First step:
-- ask to the user to select .tif (aligned sequence of image obtained after running the Crop_And_LoadROIline and AlignImageSequence macros)
+- asks to the user to select .tif (aligned sequence of image obtained after running the Crop_And_LoadROIline and AlignImageSequence macros)
 - load the real time of acquisition in the text file generated with Crop_And_LoadROIline macro
 - the corresponding ROI for the UV laser line is automatically laoded
-- the macro ask to the user to draw a ROI outside the UV damaged zone
+- the macro asks to the user to draw a ROI outside the UV damaged zone
 -  plot the raw data curves and save the values in a imageBasename_Rawdatas.txt
 - substract the background (fixed to 102 for the background of the Prime95B camera
 - normalize the curve (base line to 1) 
@@ -54,4 +54,9 @@ First step:
  - max intensity value and the corresponding time to reach this max are printed on the graph
 
 Second step:
+-fit the normalize data curve with a two exponentail model
+-the macro asks the user if he wants to fit the data on the while time scale or to stop at a precise time (we have to stop fitting when the signal reaches the max value or plateau)
+Fit curve is added on the final graph 
+All the results are written in tetx files taht contains the raw datas, mornalize datas, fit results and extracted parameters
+All the graphs are saved in .jpeg so the user can easily have a look on the results.
 

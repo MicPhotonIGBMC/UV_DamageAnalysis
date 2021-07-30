@@ -51,11 +51,13 @@ First step:
 - plot the normalize data curves and save the values in a imageBasename_Normdatas.txt
  - determine the max intensity value and the corresponding time to reach this max
 - graph showing the raw and normalized datas are  saved in .jpeg  
- - max intensity value and the corresponding time to reach this max are printed on the graph
+ - pourcentage of increase of intensity versus the basal level is printed on the graph
 
 Second step:
 -fit the normalize data curve with a two exponentail model
 -the macro asks the user if he wants to fit the data on the while time scale or to stop at a precise time (we have to stop fitting when the signal reaches the max value or plateau)
+- pourcentage of increase of intensity versus the basal level is printed on the graph
+- t1/2 to recah the max is extract from the analysis and also printed on the graph
 Fit curve is added on the final graph 
 All the results are written in tetx files taht contains the raw datas, mornalize datas, fit results and extracted parameters
 All the graphs are saved in .jpeg so the user can easily have a look on the results.
